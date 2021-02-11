@@ -28,6 +28,11 @@ import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
+import {NzLayoutModule} from "ng-zorro-antd/layout";
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzAlertModule} from "ng-zorro-antd/alert";
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -42,11 +47,13 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 // ant design
 const NG_ZORRO_MODULE = [
 
+  NzLayoutModule,
   NzCheckboxModule,
   NzFormModule,
   NzInputModule,
   ReactiveFormsModule,
   NzButtonModule,
+  NzAlertModule
 ];
 
 @NgModule({
@@ -62,6 +69,7 @@ const NG_ZORRO_MODULE = [
     DetailModule,
     AppRoutingModule,
     ...NG_ZORRO_MODULE,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
