@@ -12,7 +12,6 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {HomeModule} from './home/home.module';
-import {DetailModule} from './detail/detail.module';
 
 import {AppComponent} from './app.component';
 
@@ -37,7 +36,7 @@ import {NzAlertModule} from "ng-zorro-antd/alert";
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
 };
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key]);
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -46,7 +45,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
 // ant design
 const NG_ZORRO_MODULE = [
-
   NzLayoutModule,
   NzCheckboxModule,
   NzFormModule,
@@ -66,7 +64,6 @@ const NG_ZORRO_MODULE = [
     CoreModule,
     SharedModule,
     HomeModule,
-    DetailModule,
     AppRoutingModule,
     ...NG_ZORRO_MODULE,
     BrowserAnimationsModule,

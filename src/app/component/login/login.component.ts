@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.localStorage.clear();
     this.validateForm = this.fb.group({
       // eslint-disable-next-line @typescript-eslint/unbound-method
       userName: [null, [Validators.required]],
